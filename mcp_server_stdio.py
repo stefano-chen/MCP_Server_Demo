@@ -3,7 +3,7 @@ from typing import Dict, Any, Union
 import httpx
 from urllib.parse import urlencode
 
-mcp = FastMCP("Conversion", port=8080)
+mcp = FastMCP("Conversion-STDIO")
 
 BASE_API = "http://localhost:8000/convert"
 
@@ -22,7 +22,9 @@ def format(response: Dict[str, Any]) -> str:
     formatted_text = f"{values[0]} {keys[0]} are equal to {values[1]} {keys[1]}"
     return formatted_text
 
-
+# IMPORTANT
+# When defining tools, always include a docstring
+# It is required, as the LLM uses it to understand the tool's goal and behavior
 @mcp.tool()
 async def meters_to_miles(meters: Union[float, int]) -> str:
     """
@@ -37,6 +39,9 @@ async def meters_to_miles(meters: Union[float, int]) -> str:
     response = await make_request(encoded_url_with_params)
     return format(response)
 
+# IMPORTANT
+# When defining tools, always include a docstring
+# It is required, as the LLM uses it to understand the tool's goal and behavior
 @mcp.tool()
 async def kg_to_pounds(kg: Union[float, int]) -> str:
     """
@@ -53,7 +58,6 @@ async def kg_to_pounds(kg: Union[float, int]) -> str:
 
 
 if __name__ == "__main__":
-    print("MCP running")
     # IMPORTANT
     # For STDIO-based servers: Never write to standard output (stdout).
     # Writing to stdout will corrupt the JSON-RPC messages and break your server.
