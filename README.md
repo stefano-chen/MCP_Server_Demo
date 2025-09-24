@@ -1,6 +1,6 @@
 # MCP Server Demo
 
-A demo implementation of a **Model Context Protocol (MCP)** server using **FastAPI** and the **mcp-sdk for Python**. This server is designed as a lightweight reference implementation to support advanced agentic RAG systems and other MCP-based architectures.
+A demo implementation of a **Model Context Protocol (MCP)** server using **FastAPI** and the **[mcp-sdk for Python](https://modelcontextprotocol.io/docs/getting-started/intro)**. This server is designed as a lightweight reference implementation to support advanced agentic RAG systems and other MCP-based architectures.
 
 This custom MCP server is designed to work with this [project](https://github.com/stefano-chen/Advanced_Agentic_RAG_custom_MCP)
 
