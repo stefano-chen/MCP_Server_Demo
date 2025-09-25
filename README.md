@@ -13,14 +13,7 @@ This custom MCP server is designed to work with this [project](https://github.co
 - [Architecture & Components](#architecture--components)  
 - [Getting Started](#getting-started)  
   - [Prerequisites](#prerequisites)  
-  - [Installation](#installation)  
-  - [Running the Server](#running-the-server)  
-- [Usage & Endpoints](#usage--endpoints)  
-- [Integration with Agentic RAG](#integration-with-agentic-rag)  
-- [Configuration & Customization](#configuration--customization)  
-- [Project Structure](#project-structure)  
-- [Contributing](#contributing)  
-- [License](#license)  
+  - [Installation](#installation)   
 
 ---
 
